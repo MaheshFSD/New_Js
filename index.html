@@ -11,9 +11,21 @@
     <script src="js1.js"></script>
     <h2>HI</h2>
     <input type="button" onclick="myfunction()" name="btn" value="clickme" >
+    <input type="button" onclick="myfunction2()" name="btn" value="clickme2" >
     <script>
         function myfunction() {
+            // open a new output stream and write some html and then close it
+            document.open();
+            document.write('<p>lorem ipsum</p>');
             document.write("I am the new element");
+            document.close();
+        }
+        function myfunction2() {
+            // open a new window output stream and write some html and then close it
+            const newWindow = window.open();
+            newWindow.document.write('<p>lorem ipsum</p>');
+            newWindow.document.write("I am the new element");  // this way 
+            // window.open().document.write('Helllllllllloooooooo'); // this way works
         }
     </script>
 </body>
