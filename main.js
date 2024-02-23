@@ -55,3 +55,5 @@ console.log(str.substring(1,5), str.substring(4), str.substring(0,0), str.substr
 console.log(str.substr(3,5), str.substr(4), str.substr(-6), ' ----------- substr gives a part of the string from the starting value to the no of characters specified.');
 console.log(str.toUpperCase(), ' ========= uppercase');
 console.log('str'.toUpperCase().toLowerCase(), 'ABC'.toLowerCase(), ' ========= lowerCase');
+console.log('abcd'.concat(' connecting with ', 'xyz'), ' =========== concating two strings with some middle string.');
+console.log('abcd'.concat('xyz'), ' =========== concating two strings without some middle string.');
