@@ -16,7 +16,7 @@ console.log(obj3.x, ' =======');
 // with (Math){y = cos(0), z = 100};
 // console.log(Math.y, z, '11111111');
 eval ("z = 8");
-alert (z);
+// alert (z);
 eval (' let p = 100');
 // alert(p);
 function fun () {

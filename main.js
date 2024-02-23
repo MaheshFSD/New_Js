@@ -31,9 +31,21 @@ console.log(obj2.x, ' =======');
 with (Math){y = cos(0), z = 100};
 console.log(Math.y, z, '11111111');
 eval ("x = 2");
-alert(x);
+// alert(x);
 function fun () {
     console.log(this);
 }
 fun()
 document.write('Hello from document.write')
+let p=1,q=2,r=3;console.log(p,q,r,'======');
+let sq = 2;
+console.log(2 ** 4, ' ======== square');
+console.log(36 ** .5, ' ======== squareRoot');
+console.log(Math.cbrt(8), ' === cuberoot');
+
+// Strings, properties and methods.....
+let str = 'qwertyuiop';
+console.log(str.length, ' length');
+console.log(str.charAt(0), str.charAt(2), str.charAt(str.length-2), ' ===== string charAt method.');
+console.log(str.charAt(-3),' --------- negative value doesnot work in charAt but no error');
+console.log(str.charCodeAt(0), str.charCodeAt(3), str.charCodeAt(5),'A'.charCodeAt(), 'a'.charCodeAt(), '------ CharcodeAt returns the utf16 ascii value of the character');
