@@ -68,13 +68,32 @@ console.log(str2.replace(/hello/g, 'hey'), ' ============ replacing All occuranc
 console.log(str2.replace(/HELLO/i, 'hey'), ' ============ replacing first occurance of hello/Hellow case insensitive');
 console.log(str2.replaceAll('Hello', 'hey'), ' ============ replacing All occurance of Hello');
 console.log(str2.replaceAll('hello', 'hey'), ' ============ replacing All occurance of hello');
-console.log(str2.replaceAll(/HELLO/g, 'hey'), ' ============ replacing All occurance of hello');
+console.log(str2.replaceAll(/HELLO/gi, 'hey'), ' ============ replacing All occurance of hello');
 console.log(str2.replaceAll(/hello/g, 'hey'), ' ============ replacing All occurance of hello');
 console.log(typeof str2, ' ========= type');
 let str3 = ' asdffg asds kjk,jkj, kkl,jkkll asdf|ghjkl'
-let str4 = 'Hello world'
+let str4 = 'Hello world';
+let str5 = 'Hello hello HELLO hello Hello HELLO World world WORLD '
 console.log(str2.split(' '), ' --------- split by white spaces');
 console.log(str3.split(','), ' --------- split by comma spaces');
 console.log(str3.split('|'), ' --------- split by pipe spaces');
 console.log(str4.split(''), ' --------- split Each character');
 console.log(str4.split(), ' --------- If nothing provided, then it gives an array and the 0th element is the entire string');
+console.log(str4.indexOf('llo'), ' ========== index of gives the first occurance position or index of the string in the given string if it is there. otherwise it returns -1');
+console.log(str4.indexOf('lll'), ' ==========  otherwise it returns -1');
+console.log(str4.lastIndexOf('o'), ' ========== last index of gives the last occurance position/index of the string in the given string if it is there. otherwise it returns -1');
+console.log(str4.indexOf('aaa'), ' ========== lastindex otherwise it returns -1');
+console.log(str4.indexOf('l', 5), ' ========== it starts searching from 5th position');
+console.log(str4.lastIndexOf('o', 6), ' ========== it starts searching from 6th position');
+console.log(str4.search('wor'), ' --------- gives the first occurance of the index if the string gets found or -1. it can not take second parameter like indexOf. but takes powerful search expressions like regular where as indexof doulnot support');
+console.log(str4.search('lp'), ' --------- gives the first occurance of the index if the string gets found or -1. it can not take second parameter like indexOf. but takes powerful search expressions like regular where as indexof doulnot support');
+console.log(str4.match('wo')[0], ' ----------- match returns array of the matched string / (strings if multiple matches done) in array if it finds. array size 1, value is in array[0]');
+console.log(str5.match(/Hello/gi), ' ----------- returns array of multiple matches of o in the string.');
+console.log(str5.match(/HELLO/ig), ' ----------- returns array of multiple matches of o in the string.');
+console.log(str5.match(/HELLs/), ' ----------- returns nothing....');
+console.log(str4.matchAll('l'), ' ----------- MatchAll returns all the matches in regExpStringIterator if finds.if not match returns nothing....');
+let regexpstriterator = str4.matchAll('l');
+console.log(regexpstriterator[0], Array.from(regexpstriterator)[0][0], ' ----------- MatchAll returns all the matches in regExpStringIterator if finds.if not match returns nothing....');
+let regexpstriterator1 = str4.matchAll('H');
+console.log(regexpstriterator1[0], Array.from(regexpstriterator1)[0][0], ' ----------- MatchAll returns all the matches in regExpStringIterator if finds.if not match returns nothing....');
+console.log(str4.matchAll('abc'), ' ----------- MatchAll returns nothing if not matched....');

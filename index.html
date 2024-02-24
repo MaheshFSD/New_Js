@@ -12,6 +12,8 @@
     <h2>HI</h2>
     <input type="button" onclick="myfunction()" name="btn" value="clickme" >
     <input type="button" onclick="myfunction2()" name="btn" value="clickme2" >
+    <input type="button" onclick="myfunction3()" name="btn" value="clickme3" >
+    <p id="matchAll"></p>
     <script>
         function myfunction() {
             // open a new output stream and write some html and then close it
@@ -28,6 +30,11 @@
             newWindow.document.write('lorem ipsum');
             newWindow.document.writeln("I am the new element");  // this way 
             // window.open().document.write('Helllllllllloooooooo'); // this way works
+        }
+        function myfunction3() {
+            let str4 = 'Hello world';
+            let regexpstriterator = str4.matchAll('l');
+            document.getElementById('matchAll').innerHTML = Array.from(regexpstriterator);
         }
     </script>
 </body>
