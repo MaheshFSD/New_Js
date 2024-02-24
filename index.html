@@ -13,7 +13,9 @@
     <input type="button" onclick="myfunction()" name="btn" value="clickme" >
     <input type="button" onclick="myfunction2()" name="btn" value="clickme2" >
     <input type="button" onclick="myfunction3()" name="btn" value="clickme3" >
+    <input type="button" onclick="myfunction4()" name="btn" value="clickme3" >
     <p id="matchAll"></p>
+    <p id="stringLiteral"></p>
     <script>
         function myfunction() {
             // open a new output stream and write some html and then close it
@@ -35,6 +37,13 @@
             let str4 = 'Hello world';
             let regexpstriterator = str4.matchAll('l');
             document.getElementById('matchAll').innerHTML = Array.from(regexpstriterator);
+        }
+        function myfunction4() {
+            let text = `<h1>Header</h1> <ul>`;
+            let arr = ['i', 'am', 'a', 'full stack', 'developer'];
+            for(let i=0; i<arr.length; i++) text+=`<li>${arr[i]}</li><br>`
+            text+=`</ul>`
+            document.getElementById('stringLiteral').innerHTML = text;
         }
     </script>
 </body>

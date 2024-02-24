@@ -97,3 +97,7 @@ console.log(regexpstriterator[0], Array.from(regexpstriterator)[0][0], ' -------
 let regexpstriterator1 = str4.matchAll('H');
 console.log(regexpstriterator1[0], Array.from(regexpstriterator1)[0][0], ' ----------- MatchAll returns all the matches in regExpStringIterator if finds.if not match returns nothing....');
 console.log(str4.matchAll('abc'), ' ----------- MatchAll returns nothing if not matched....');
+console.log(str5.includes('hello'), ' ============== includes returns true if the string is present in the given one or false.');
+console.log(str5.includes('hello', 25), ' ============== includes starts checking the string from the starting value.');
+console.log(str5.includes('hello', -25), ' ============== includes starts checking the string from right to left.');
+console.log(typeof 7, typeof 'hello', typeof {}, typeof true, ' =================== data types')
