@@ -101,3 +101,14 @@ console.log(str5.includes('hello'), ' ============== includes returns true if th
 console.log(str5.includes('hello', 25), ' ============== includes starts checking the string from the starting value.');
 console.log(str5.includes('hello', -25), ' ============== includes starts checking the string from right to left.');
 console.log(typeof 7, typeof 'hello', typeof {}, typeof true, ' =================== data types')
+// console.log(typeof variable,  ' ================ variable'); // we cannot access let and const variables before initialization...
+console.log(variable1, ' =================== variable1');
+let variable2;
+const variable3=100;
+console.log(variable3, ' =========================== variable3 ----');
+console.log(variable2, ' =========================== variable2 ----');
+let variable = 10;
+console.log(variable, ' =================== variable');
+var variable1 =100;
+console.log(typeof variable, typeof String(10), typeof Number('100'), ' ========== type conversion num to string and string to num');
+console.log(typeof (variable+''), typeof (+'10'), ' ========== type conversion num to string and string to num');

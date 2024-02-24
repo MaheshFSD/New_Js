@@ -23,3 +23,5 @@ function fun () {
     console.log(this);
 }
 fun()
+let varr;
+console.log(varr, ' =================== varr ===');
