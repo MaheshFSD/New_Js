@@ -45,6 +45,7 @@ console.log(Math.cbrt(8), ' === cuberoot');
 
 // Strings, properties and methods.....
 let str = 'qwertyuiop';
+let str1 = '         Hello world       ';
 console.log(str.length, ' length');
 console.log(str.charAt(0), str.charAt(2), str.charAt(str.length-2), ' ===== string charAt method.');
 console.log(str.charAt(-3),' --------- negative value doesnot work in charAt but no error');
@@ -57,3 +58,23 @@ console.log(str.toUpperCase(), ' ========= uppercase');
 console.log('str'.toUpperCase().toLowerCase(), 'ABC'.toLowerCase(), ' ========= lowerCase');
 console.log('abcd'.concat(' connecting with ', 'xyz'), ' =========== concating two strings with some middle string.');
 console.log('abcd'.concat('xyz'), ' =========== concating two strings without some middle string.');
+console.log(str1.trimStart(), str1.trimEnd(), str1.trim(), ' =========== removes white spaces from start, from end and bothsides respectively');
+console.log(str.padStart(20, 'xyz'), ' ========== string padding to start untill the string length reaches to the 20');
+console.log(str.padEnd(22, 'xyz'), ' ========== string padding to End untill the string length reaches to the 22');
+console.log(str.repeat(4), ' =============== the input string gets repeated specified no of times and returned');
+let str2 = 'hello Hello HELLO Hello hello, please listen to me';
+console.log(str2.replace('hello', 'hey'), ' ============ replacing first occurance of hello');
+console.log(str2.replace(/hello/g, 'hey'), ' ============ replacing All occurances of hello with global flag');
+console.log(str2.replace(/HELLO/i, 'hey'), ' ============ replacing first occurance of hello/Hellow case insensitive');
+console.log(str2.replaceAll('Hello', 'hey'), ' ============ replacing All occurance of Hello');
+console.log(str2.replaceAll('hello', 'hey'), ' ============ replacing All occurance of hello');
+console.log(str2.replaceAll(/HELLO/g, 'hey'), ' ============ replacing All occurance of hello');
+console.log(str2.replaceAll(/hello/g, 'hey'), ' ============ replacing All occurance of hello');
+console.log(typeof str2, ' ========= type');
+let str3 = ' asdffg asds kjk,jkj, kkl,jkkll asdf|ghjkl'
+let str4 = 'Hello world'
+console.log(str2.split(' '), ' --------- split by white spaces');
+console.log(str3.split(','), ' --------- split by comma spaces');
+console.log(str3.split('|'), ' --------- split by pipe spaces');
+console.log(str4.split(''), ' --------- split Each character');
+console.log(str4.split(), ' --------- If nothing provided, then it gives an array and the 0th element is the entire string');
