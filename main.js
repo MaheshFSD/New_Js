@@ -112,3 +112,14 @@ console.log(variable, ' =================== variable');
 var variable1 =100;
 console.log(typeof variable, typeof String(10), typeof Number('100'), ' ========== type conversion num to string and string to num');
 console.log(typeof (variable+''), typeof (+'10'), ' ========== type conversion num to string and string to num');
+let variable4 = null;
+console.log(variable4, typeof variable4, ' =================== variable 4'); // type of null is object in JS. it is a bug but lots of code and many ides wrote code based on this that's why they left it as bug, heard from a person - not sure
+let variable5 = 1234567890123456789087;
+console.log(variable5, ' ======================== variable5 ====='); // exponentially saved. to avoid this we use BigInt
+let variable6 = BigInt(123412345678901232);
+console.log(variable6, ' ---------------------------- variable6 with bigInt');
+let variable7 = 123456789123456789n;
+console.log(variable7, ' ==================== variable7 ========= ')
+console.log(variable6+variable7, ' ==================== we can add bigint with bigint but not with just number');
+console.log(123n+456n, ' ============ bigint with bigint works')
+console.log(123n + 1234, ' ================================= big with normal') // Error
