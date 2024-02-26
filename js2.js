@@ -43,3 +43,23 @@ console.log(x, ' ======= after adding element in the beginning  elememt');
 // and the variable x in stack has the address of the array value stored in heap.
 // if yu assign one array to another variable or reference type variable to another then it has the same address in the stack like the reference type variable but the data that is stored at the address is the array elements.
 // primitives are call by values and references are call by reference
+let y = x;
+console.log(x,y, ' ========= printing both the arrays ====');
+x.unshift('asdfgh');
+console.log(x,y, ' ========= printing both the arrays and they both gets the updated data. because x and y are reference types and tthey has the address stored in stack and values in heap. ====');
+// Cloning one array to another
+// let z = x.splice(0); // one way
+// let z = x.concat([]); // another way
+// let z = [].concat(x); // another way 
+let z = [...x];
+let p = [...z, ...y, ' Hello']
+console.log(z, ' ============= new cloned z array')
+console.log(p, ' ============= new cloned p array')
+let q = 'qwertyu';
+console.log(q.length, ' ================== string length ===');
+console.log(p.length, ' ================ p array length ==');
+for(let ele of p) console.log(ele, ' -------- Each element travered in FOR OF Loop ==='); // One way ------ to travrse through array
+p.forEach(ele => console.log(ele, ' =========== Each element in FOREACH loop'));
+p.forEach(ele => console.log(JSON.stringify(ele), ' =========== stringifying Each element  JSON - javascript object notation'));
+// use Const while creating arrays. this way you can not re-assign a new array to the same variable as it gives error. but in case of let.
+
