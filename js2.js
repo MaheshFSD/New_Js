@@ -20,3 +20,10 @@ else {
     }
 }
 console.log(flag? ' it is a prime number': ' it is not a prime number');
+console.log(Symbol('optional string'), '      ========= symbol ');
+console.log((Symbol() === Symbol()), '      ========= symbol ');
+let x = ['hello', 20, 'say it', { a: 20, b: 30}];
+console.log(x, ' ========= ordered collection of items... is reference type');
+x[2] = 100.123;
+console.log(x, ' ========= ordered collection of items...');
+console.log(Array.isArray(x) , ' =========== iArray will tell if it is a Array or not. returns true or false');
