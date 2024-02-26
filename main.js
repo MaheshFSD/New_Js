@@ -122,4 +122,31 @@ let variable7 = 123456789123456789n;
 console.log(variable7, ' ==================== variable7 ========= ')
 console.log(variable6+variable7, ' ==================== we can add bigint with bigint but not with just number');
 console.log(123n+456n, ' ============ bigint with bigint works')
-console.log(123n + 1234, ' ================================= big with normal') // Error
+// console.log(123n + 1234, ' ================================= big with normal') // Error
+console.log(Number.MAX_SAFE_INTEGER, ' =============== Number.MAX_SAFE_INTEGER ====== ');
+let vaariable8 = '';
+vaariable8 = false;
+let vaariable9;
+vaariable8 = vaariable9; // undefined
+vaariable8 = null;
+vaariable8 = 0;
+vaariable8 = -1; // true value
+vaariable8 = 'Hello'
+if(vaariable8) console.log(' ========= true vale');
+else console.log(' ============== empty string, undefined, null, 0, false are falsy values. other than these true values');
+console.log(5>4? ' ========== Turnary true example': '============== Turnary false example');
+console.log(5>500? ' ========== Turnary true example': '============== Turnary false example');
+let variable9 = prompt('Enter Value');
+console.log(variable9, typeof vaariable9, ' ================ prompt returns string type =====');
+console.log((100 + +variable9), ' ========== adding string and num ====');
+console.log(100+'10', ' ============= string + num');
+let color = 'R';
+switch (color) {
+    case 'R' : console.log('============= RED ======='); break;
+    case 'O' : console.log('============= ORANGE ======='); break;
+    case 'Y' : console.log('============= Yellow ======='); break;
+    case 'G' : console.log('============= Green ======='); break;
+    case 'B' : console.log('============= BLUE ======='); break;
+    case 'I' : console.log('============= INDIGO ======='); break;
+    default : console.log('=============== Violet ======');
+}
