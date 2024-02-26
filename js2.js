@@ -27,3 +27,19 @@ console.log(x, ' ========= ordered collection of items... is reference type');
 x[2] = 100.123;
 console.log(x, ' ========= ordered collection of items...');
 console.log(Array.isArray(x) , ' =========== iArray will tell if it is a Array or not. returns true or false');
+x.push(10000);
+console.log(x, ' =====after pushing elememt');
+let catchEle = x.pop();
+console.log(x, ' ======== after popping elememt');
+let catchEle1 = x.shift();
+console.log(x, ' ======= after removing element in the beginning  elememt');
+x.unshift(22222);
+console.log(x, ' ======= after adding element in the beginning  elememt');
+// understand the diff btw primitive type and reference type
+// primitive types gets stored in stack
+// why? -- because they will take minimum memory only.
+// reference type - they gets stored in heap. 
+// why - they might take up large memory spaces. 
+// and the variable x in stack has the address of the array value stored in heap.
+// if yu assign one array to another variable or reference type variable to another then it has the same address in the stack like the reference type variable but the data that is stored at the address is the array elements.
+// primitives are call by values and references are call by reference
