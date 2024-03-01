@@ -35,6 +35,27 @@ console.log(person, person['age'], person['gender'], person['hobbies'], ' ======
 // person.111 = 'just some value'; // won't work with this kind of keys. here you must use bracket notion. this is a Error. won't work
 person['111'] = 'key with numbers'; // this is fine. we can use this format...
 person.hobbies.forEach(ele=>console.log('elements of the array in the object are using ForEach Method...', ele));
-
+// there is one more difference to dot and bracket ===
+// const employee = {
+//     full name : ' abhinay shukla', // we can't write two words like this for a property name. there is no spaces allowed in names of varables...
+// }
+// what we can do is 
+const employee ={
+    'full name': ' Abhinay shukla',
+    age: 29,
+};
+// now access the properties of the object through both notations
+// console.log(employee, employee.full name, employee.age, ' =========== using dot notation ------'); // this won't work as it clearly is out of the dot notaion. it's an error
+// here we must use bracket notation only.
+console.log(employee, employee['full name'], employee['age'], ' =========== using bracket notation ------'); // this works
+// one more difference
+let objKey = 'email';
+// now you want to create a key with objKey.
+person.objKey = 'hello@gmail.com';
+console.log(person, " =========== you can clearly see that it took objKey as it's key instead of email as it's key === "); // to avoid this we use bracket notation 
+delete person.objKey;
+person[objKey] = 'abhijith@hello.com';
+console.log(person, ' =========== NOW CHECK THE DIFFERENCE BETWEEN NOTATIONS IN THIS CASE ===');
+// OBJECT ITERATION
 
 
