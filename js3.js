@@ -13,4 +13,11 @@ console.log(myColor1,myColor2,myColorArray, ' --------------- values after destr
 const names = ['first'];
 let [firstName, lastName] = names;
 console.log(firstName,lastName, ' =========== after destructuring the Array names');
+//usually when ever we use arrays destructuring we prefer constant than let. by this we can avoid the changing values unknowingly...
+// if you don't want some variables while destructurung you can avoid them by just giving , (comma) without any name..
+const stds = [ 'std1', 'std2', 'std3', 'std4', 'std5'];
+// say you don't need std3 and std4 values. ex
+const [s1,s2,,,s5] = stds;
+console.log(s1,s2,s5, ' -=============== getting only required vales by destructuring the array =====');
+
 
