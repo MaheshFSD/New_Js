@@ -19,5 +19,22 @@ const stds = [ 'std1', 'std2', 'std3', 'std4', 'std5'];
 // say you don't need std3 and std4 values. ex
 const [s1,s2,,,s5] = stds;
 console.log(s1,s2,s5, ' -=============== getting only required vales by destructuring the array =====');
+const [ss1,ss2, ...remainingElementsArray] = stds;
+console.log(ss1,ss2, remainingElementsArray, ' ================== taking the remaining elements into a new array');
+// object creation and accessing and modification 
+const person = {
+    fName: 'Abhinay',
+    hobbies: ['cricket', 'singing', 'cooking'],
+    age: 28,
+};
+console.log(person, person.age, person.hobbies, person.hobbies[2], person.gender, ' ================= just accesing the v alues of the object ==' );
+person.gender = 'Male';
+// console.log(person, person[age], person[gender], person[hobbies], ' =============== just ytrying to access properties through bracket notation -===-'); // Error because we didn't specify the property name in string format in bracket notation.
+// we can't access properties like above
+console.log(person, person['age'], person['gender'], person['hobbies'], ' =============== just ytrying to access properties through bracket notation -===-'); 
+// person.111 = 'just some value'; // won't work with this kind of keys. here you must use bracket notion. this is a Error. won't work
+person['111'] = 'key with numbers'; // this is fine. we can use this format...
+person.hobbies.forEach(ele=>console.log('elements of the array in the object are using ForEach Method...', ele));
+
 
 
