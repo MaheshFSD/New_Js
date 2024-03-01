@@ -57,5 +57,12 @@ delete person.objKey;
 person[objKey] = 'abhijith@hello.com';
 console.log(person, ' =========== NOW CHECK THE DIFFERENCE BETWEEN NOTATIONS IN THIS CASE ===');
 // OBJECT ITERATION
-
+Object.keys(person).forEach(ele => console.log(person[ele], ' ============ Object iteration for elements === '));
+console.log(Object.values(person), ' ================ Object values array ==== ');
+for(let key in person) {
+    console.log(key, ' == ', person[key], '   =========   key value pairs ===');
+}
+console.log(Object.entries(person), ' ===================== using Object.entries method to iterate === ');
+const personObjectArray = Object.entries(person);
+console.log(personObjectArray[0], personObjectArray[1], personObjectArray[2], personObjectArray[3], ' ================ object.entries array elements ==');
 
