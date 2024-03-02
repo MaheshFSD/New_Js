@@ -60,9 +60,14 @@ console.log(person, ' =========== NOW CHECK THE DIFFERENCE BETWEEN NOTATIONS IN 
 Object.keys(person).forEach(ele => console.log(person[ele], ' ============ Object iteration for elements === '));
 console.log(Object.values(person), ' ================ Object values array ==== ');
 for(let key in person) {
-    console.log(key, ' == ', person[key], '   =========   key value pairs ===');
+    console.log(key, ' == ', person[key], '   =========   key value pairs === using FOR IN');
 }
 console.log(Object.entries(person), ' ===================== using Object.entries method to iterate === ');
 const personObjectArray = Object.entries(person);
 console.log(personObjectArray[0], personObjectArray[1], personObjectArray[2], personObjectArray[3], ' ================ object.entries array elements ==');
+personObjectArray.forEach(ele => console.log(ele, ele[0]+' = '+ ele[1], ' ================= entries object output iteration -==== '));
+let resArray = Object.entries(person).map(eachEntry => console.log(eachEntry[0]+' = '+eachEntry[1], ' just printing from iteration usinhg entries using MAP'));
+Object.entries(person).forEach(ele => console.log(ele[0]+' = '+ele[1], ' just printing from iteration usinhg entries with FOREACH'));
+console.log(person.hasOwnProperty('age'), person.hasOwnProperty('salary'), ' ========== returns true or false ==== ');
+
 
