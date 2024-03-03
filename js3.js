@@ -106,5 +106,23 @@ console.log({...'111', ...222}, ' ================ it will destrucure the the st
 // console.log({...'111', ...abcdef}, ' ================ it will destrucure the the string but not the number '); // abcdef is not defined --- reference error 
 console.log({...[1,2,3,4], ...'abc', ...'987', ...['xyz']}, '========= destructuring object in deifferent ways ====== '); // {0: 'xyz', 1: '8', 2: '7', 3: 4} it's interesting..... check the object is taking the first array element length and next if the elements again come on previous indexes / or key the values will change.
 
+// Object destructuring ..... 
+const obj = {
+    dest1: 'dval1',
+    dest2: 'dval2',
+    dest3: 'dval3',
+    dest4: 'dval4',
+    dest5: 'dval5',
+};
+console.log(obj, ' ============== example object ==== ');
+const {dest1, dest2} = obj;
+console.log(dest1, dest2, ' ==============  values of the object after destructuring .....  ======== ');
+const {dest1: newDwst1, dest2: newDest2, dest3: newDest3} = obj;
+console.log(newDwst1, newDest2, newDest3, ' ==============  values of the object after destructuring .....  ======== ');
+const {...newObjDest} = obj;
+console.log(newObjDest, ' ================= destructuring object values into another object ;;;;;; ');
+const {dest1: newD1, ...newDestObj2} = obj;
+console.log(newD1, newDestObj2, ' ========= after taking the values required just destructuring the remaining values in another object ====');
+
 
 
