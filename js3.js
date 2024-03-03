@@ -124,5 +124,31 @@ console.log(newObjDest, ' ================= destructuring object values into ano
 const {dest1: newD1, ...newDestObj2} = obj;
 console.log(newD1, newDestObj2, ' ========= after taking the values required just destructuring the remaining values in another object ====');
 
+// Array of object like in real world 
+const users = [
+    {
+        userId: 1,
+        name: 'abhishek',
+        age: 28
+    },
+    {
+        userId: 2,
+        name: 'Suman',
+        age: 30
+    },
+    {
+        userId: 3,
+        name: 'Prudhvi',
+        age: 26
+    }
+];
+// array of objects destructuring ....
+
+const [user1,user2,user3] = users;
+console.log(user1,user2, user3, ' ======= individual objects of the array======');
+const [{name},,{age}] = users;
+console.log(name, age, ' ============== destructuring the needed variables ===== ');
+const [{name: name1},,{age: age3}] = users;
+console.log(name1, age3, ' ============== destructuring the needed variables ===== ');
 
 
