@@ -69,5 +69,19 @@ personObjectArray.forEach(ele => console.log(ele, ele[0]+' = '+ ele[1], ' ======
 let resArray = Object.entries(person).map(eachEntry => console.log(eachEntry[0]+' = '+eachEntry[1], ' just printing from iteration usinhg entries using MAP'));
 Object.entries(person).forEach(ele => console.log(ele[0]+' = '+ele[1], ' just printing from iteration usinhg entries with FOREACH'));
 console.log(person.hasOwnProperty('age'), person.hasOwnProperty('salary'), ' ========== returns true or false ==== ');
+// computed properties ..... 
+let var1 = 'variable1';
+const var2 = 'variable2';
+const var3 = 'variable3';
+const value1 = 'value1';
+const value2 = 'value2';
+const value3 = 'value3';
+// create a new object with computed properties ....
+const computedObj = {
+    [var1]: value1,
+    [var2]: value2,
+    [var3]: value3
+};
+console.log(computedObj, ' -======== Computed properties of the object..... ');
 
 
