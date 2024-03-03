@@ -84,4 +84,27 @@ const computedObj = {
 };
 console.log(computedObj, ' -======== Computed properties of the object..... ');
 
+// array spreading  ...
+let array1 = [1,2,3,4];
+let array2 = [5,6,7,8];
+let array3 = [...array1,array2,9,10];
+console.log(array3, ' =============== creaating a new array with spreading operator ==== ');
+console.log([...array1,...array2, 10,20,30], ' ========= sample spreading');
+console.log([...'ABCDEFG', ...'987654', ...'1234567'], ' ================ spreading strings'); //  ['A', 'B', 'C', 'D', 'E', 'F', 'G', '9', '8', '7', '6', '5', '4', '1', '2', '3', '4', '5', '6', '7'] 
+
+//Array destructuring ....
+const arrayDestruct = ['v1', 'v2', 'v3'];
+// const [v1,v2,v3] = arrayDestruct;
+// const [v1,v3] = arrayDestruct;
+// const [v1,,v3] = arrayDestruct; // skipping the second value of the array
+const [v1,...v3] = arrayDestruct; // getting remaining all the eelments into v3 by destructuring the array.
+console.log(v1,v3, ' ============= array destructuring ---===== ');
+// Object spreading ...
+let newComputedObj = {...computedObj, var4: 'value4'};
+console.log(newComputedObj, ' ========== newComputedObj after destructuring an obj ----- ');
+console.log({...'111', ...222}, ' ================ it will destrucure the the string but not the number ');
+// console.log({...'111', ...abcdef}, ' ================ it will destrucure the the string but not the number '); // abcdef is not defined --- reference error 
+console.log({...[1,2,3,4], ...'abc', ...'987', ...['xyz']}, '========= destructuring object in deifferent ways ====== '); // {0: 'xyz', 1: '8', 2: '7', 3: 4} it's interesting..... check the object is taking the first array element length and next if the elements again come on previous indexes / or key the values will change.
+
+
 
