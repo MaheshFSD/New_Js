@@ -142,7 +142,7 @@ const users = [
         age: 26
     }
 ];
-// array of objects destructuring ....
+// array of objects destructuring .... it's called Nested Destructuring
 
 const [user1,user2,user3] = users;
 console.log(user1,user2, user3, ' ======= individual objects of the array======');
@@ -151,4 +151,20 @@ console.log(name, age, ' ============== destructuring the needed variables =====
 const [{name: name1},,{age: age3}] = users;
 console.log(name1, age3, ' ============== destructuring the needed variables ===== ');
 
+console.log(undefined+undefined, ' ============== undefined plus undefined will give NaN'); // NaN
+let num = [1,2,3];
+function sum (val1,val2,val3) {
+    console.log(val1+val2+val3, ' ========= Sum of the values ======');
+};
+sum(num[0],num[1],num[2]);
+sum(...num); // calling using rest operatior or spreding ....... 
+// function expression ...
+const greet = function() {
+    console.log('Hello all....')
+}
+greet();
 
+//Arrow function
+let msg = 'How are you';
+const greetAll = msg => console.log( 'Hello everyone', msg );
+greetAll(msg);
