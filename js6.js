@@ -34,5 +34,5 @@ function add2ToAll (num, index) {
 //     console.log(ind, arr[ind], ' =========== for look ind and value')
 //     add2ToAll(arr[ind], ind);
 // }
-arr.forEach(add2ToAll); //
-arr.forEach(num=>console.log(`${num+2} = after adding 2 to all elements --===`));
+// arr.forEach(add2ToAll); //
+// arr.forEach(num=>console.log(`${num+2} = after adding 2 to all elements --===`));
