@@ -42,3 +42,18 @@ console.log(strs.find(ele=>ele!=='uio'), ' ======== find method on just array ==
 console.log(strs.find(ele=>ele==='uio'), ' ======== find method on just array === with not equal to'); // abcgd - it gives the first occurance of the condition match
 console.log(strs.find(ele=>ele==='uio'), ' ======== find method on just array === with not equal to'); // abcgd - it gives the first occurance of the condition match
 console.log(strs.find(ele=>ele.length === 4), ' ======== find method on just array === with not equal to'); // abcgd - it gives the first occurance of the condition match
+
+// every Method -   returns true / false when the condition applies to all the elements in the array.
+console.log(strs.every(a=>a.length>=3), ' ======== just checking all the elements in the strs array length is 3 or more.. '); // true   
+console.log(strs.every(a=>a.length>=4), ' ======== just checking all the elements in the strs array length is 3 or more.. '); // false
+console.log(person.every(a=> a.fullName.length >= 3), ' ========== checking every method in array of objects '); // false
+console.log(person.every(a=> a.fullName.length >= 2), ' ========== checking every method in array of objects '); // true
+console.log(person.every(a=> a.salary >= 100000), ' ========== checking every method in array of objects '); // true
+console.log(person.every(a=> a.salary > 100000), ' ========== checking every method in array of objects '); // false
+
+// some Method ----- will check wethere there is at leaast one element that passes the condtion then gives true or false --
+console.log(strs.some(a => a.length === 4), ' just checks for atleast one element that passes the condition and gives true or false ===') // true
+console.log(strs.some(a => a.length === 6), ' just checks for atleast one element that passes the condition and gives true or false ===') // false
+console.log(person.some(a => a.gender === 'other'), ' checks in the array of objects and returns true or false ==='); // false
+console.log(person.some(a => a.gender === 'Female'), ' checks in the array of objects and returns true or false ==='); // true
+console.log(person.some(a => a.gender === 'female'), ' checks in the array of objects and returns true or false ==='); // false as it checked for small letter female
