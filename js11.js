@@ -30,3 +30,11 @@ console.log(map1, ' =========== after clearning the map1 ======'); //  Map(0) {s
 const map2 = new Map([['hello','welcome']]);
 map2.set(1, 100);
 console.log(map2.has('hello'), map2.has(1), ' ============ has method on maps =====');
+const keymap = 'some';
+map2.set(keymap, 5000);
+console.log(map2.has(keymap), map2.has('some'), ' ============ has method on maps =====');
+let obj ={
+    name: 'abhishek',
+    age: 26
+}
+// obj.forEach(key=> console.log(obj[key])); // in object we can not use foreach and for Of
