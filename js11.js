@@ -1,4 +1,4 @@
-// maps
+// maps - property size, methods - set, get, clear, has
 const map1 = new Map([['key1', 'val1'], ['key2', 'val2']])
 console.log(map1, ' =============== map  ======');
 map1.set(1,'one');
@@ -23,4 +23,10 @@ console.log(map1, ' ========== after removing few keys ====');
 console.log(map1.keys(), ' ============ keys of map1');
 console.log(map1.values(), ' ============ values of map1');
 console.log(map1.entries(), ' ============ entries of map1');
-console.log(map1.get(key4), ' =========== key4 value ======');
+console.log(map1.get(key4), map1.get(key2), ' =========== key4 value ======');
+console.log(map1.clear(), ' =========== clearning the map1 ======');
+console.log(map1.has(key4), map1.has(key1), map1.has('key1'), ' ============ has method on maps =====');
+console.log(map1, ' =========== after clearning the map1 ======'); //  Map(0) {size: 0}
+const map2 = new Map([['hello','welcome']]);
+map2.set(1, 100);
+console.log(map2.has('hello'), map2.has(1), ' ============ has method on maps =====');
