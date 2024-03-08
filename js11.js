@@ -47,3 +47,13 @@ for(let key of map2) {
     console.log(keyIn, value, ' ============ printing keyin and value');
 }
 for (const [key, value] of map2) console.log(key, value, ' =========== directly destructuring the key and value of maps')
+const objNeededExtraData = {
+    fName: 'abhishek',
+    age: 28
+};
+const objMap = new Map();
+objMap.set(objNeededExtraData, {'gender': 'male', 'salary': 100000}); // here we are creating new data for object in map
+console.log(objMap, ' ======= printing new map ------- '); 
+console.log(objMap.get(objNeededExtraData), ' ============== value of the object key in map ------ '); //{gender: 'male', salary: 100000}
+console.log(objMap.get(objNeededExtraData).salary, objMap.get(objNeededExtraData).gender, ' ============== value of the object key in map individual accessing through dot notation ------ '); //100000 'male' 
+
