@@ -51,9 +51,15 @@ const objNeededExtraData = {
     fName: 'abhishek',
     age: 28
 };
+const objNeededExtraData2 = {
+    fName: 'abhi',
+    age: 30
+};
 const objMap = new Map();
 objMap.set(objNeededExtraData, {'gender': 'male', 'salary': 100000}); // here we are creating new data for object in map
 console.log(objMap, ' ======= printing new map ------- '); 
 console.log(objMap.get(objNeededExtraData), ' ============== value of the object key in map ------ '); //{gender: 'male', salary: 100000}
 console.log(objMap.get(objNeededExtraData).salary, objMap.get(objNeededExtraData).gender, ' ============== value of the object key in map individual accessing through dot notation ------ '); //100000 'male' 
-
+objMap.set(objNeededExtraData2, {'gender': 'male', 'salary': 500000}); // here we are creating second new data for object in map
+console.log(objMap.get(objNeededExtraData2).salary, objMap.get(objNeededExtraData2).gender, ' ============== value of the object key in map individual accessing through dot notation ------ '); //500000 'male'
+// we can do this to s many objects as we want and access them.
