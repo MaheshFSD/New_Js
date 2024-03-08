@@ -38,3 +38,12 @@ let obj ={
     age: 26
 }
 // obj.forEach(key=> console.log(obj[key])); // in object we can not use foreach and for Of
+
+// for of in maps
+for(let key of map2) {
+    console.log(key, ' ---------- using for of to iiterate through maps');
+    console.log(Array.isArray(key), ' ---------- checking the key type in maps maps');
+    const [keyIn,value] = key;
+    console.log(keyIn, value, ' ============ printing keyin and value');
+}
+for (const [key, value] of map2) console.log(key, value, ' =========== directly destructuring the key and value of maps')
