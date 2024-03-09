@@ -25,5 +25,21 @@ obj3.verticle = 'BE';
 obj4.position = 'TPM';
 console.log(obj3,obj4, ' ========== both objs are clearly different ----- ');
 
+// optional Chaining 
+const obj5 = {
+    fName: 'Abhishek  shukla',
+    // address: {
+    //     city: 'bangalore',
+    //     state: 'karnataka'
+    // }
+}
+console.log(obj5);
+console.log(obj5.fName);
+console.log(obj5.address);
+// what if the address object is not there in the object
+// console.log(obj5.address.city, obj5.address.state, ' =============== state and city of address obj'); // error we cannot access anything over undefined 
+// to achieve this we use optional chaining
+console.log(obj5?.address?.city, obj5?.address?.state, ' =============== state and city of address obj'); // No error ----- op is undefined and undefined /........
+
 
 
