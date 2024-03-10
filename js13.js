@@ -24,3 +24,18 @@ console.log(this, ' ----------- just priniting this'); // window
 console.log(window, ' ----------- just priniting this'); // window
 console.log(this.alert('Hi'),alert('Hello!'),window.alert('Namaste!'), ' ----------- just priniting this');
 
+function newFunc () {
+    console.log(this, '------- this inside a function'); // window
+}
+newFunc();
+// so we can also call like this
+window.newFunc();
+this.newFunc();
+// to prevent this we can use 'Strict mode'
+function newFunc2 () {
+    'use strict';
+    console.log(this, ' ------- this inside strict -------- '); // undefined
+}
+newFunc2(); // undefined
+this.newFunc2(); // window
+window.newFunc2(); 
