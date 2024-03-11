@@ -98,8 +98,9 @@ console.log(userNew6, ' ========== object created from function object after usi
 
 // solution 3
 function createUser2 (fName,age,graduate,gender,salary) {
-    const user = Object.create(userMethods);
+    const user = Object.create(userMethods); // prototype chaining ------
     console.log(user, ' ============ printing user obj after creating it using Object.create ----- Now we can reference them as __proto__ or [[prototype]] has the reference of the userMethods');
+    console.log(user.__proto__, ' --------- [[prototype]] ');
     user.fName=fName;
     user.age=age;
     user.graduate=graduate;
