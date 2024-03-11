@@ -76,4 +76,22 @@ function funcEx2 (param1,param2,param3) {
     console.log(this.fName, this.age, ' - scores are - ', param1,param2,param3); // Mahesh 26  - scores are -  undefined undefined undefined
 }
 funcEx2.call(obj1); // HERE WE ARE NOT passing any arguments -----
+// Call
 funcEx2.call(obj1, 'maths - 100', 'science-110', 'databases-150'); // Mahesh 26  - scores are -  maths - 100 science-110 databases-150
+// Apply
+funcEx2.apply(obj1, ['maths - 100', 'science-110', 'databases-150']); // Mahesh 26  - scores are -  maths - 100 science-110 databases-150
+funcEx2.apply(obj1, [100,200,300]); // Mahesh 26  - scores are -  maths - 100 science-110 databases-150
+funcEx2.bind(obj1, [1000,2000,3000]); // it won't call this but returns a function we can call it later
+const funcEx2New = funcEx2.bind(obj1, [10000,20000,30000]);
+console.log(funcEx2New, ' ========= printing the returned function by bind ----- ');
+funcEx2New(); // Mahesh 26  - scores are -  (3) [10000, 20000, 30000] undefined undefined
+// in the above call only first parameter takes the entire array and the remaining elements are undefined .... 
+const funcEx2New1 = funcEx2.bind(obj1, 100000,200000,300000);
+funcEx2New1(50000);
+funcEx2.call(obj2,9000,8000); // lokesh 28  - scores are -  9000 8000 undefined
+funcEx2.apply(obj2, ['x','y','z']);
+const funcEx2New2 = funcEx2.bind(obj2, [1,2]);
+funcEx2New2([3,4,5],6); // lokesh 28  - scores are -  (2) [1, 2] (3) [3, 4, 5] 6
+const funcEx2New3 = funcEx2.bind(obj2,10,20,30);
+funcEx2New3();
+
