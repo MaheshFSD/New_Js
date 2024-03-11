@@ -70,4 +70,10 @@ funcEx.bind(); // this won't call the function instead returns the function that
 const funcExNew = funcEx.bind();
 console.log('\n',funcExNew, ' =========== resultant function after binding it ------ ');
 funcExNew();
-
+// call, apply and bind on a function which is not a method and using arguments ---- 
+function funcEx2 (param1,param2,param3) {
+    // console.log(fName, age, ' scores are - ', param1,param2,param3);  // fname and age is not defined
+    console.log(this.fName, this.age, ' - scores are - ', param1,param2,param3); // Mahesh 26  - scores are -  undefined undefined undefined
+}
+funcEx2.call(obj1); // HERE WE ARE NOT passing any arguments -----
+funcEx2.call(obj1, 'maths - 100', 'science-110', 'databases-150'); // Mahesh 26  - scores are -  maths - 100 science-110 databases-150
