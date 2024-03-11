@@ -95,3 +95,20 @@ funcEx2New2([3,4,5],6); // lokesh 28  - scores are -  (2) [1, 2] (3) [3, 4, 5]
 const funcEx2New3 = funcEx2.bind(obj2,10,20,30);
 funcEx2New3();
 
+const obj3 = {
+    fName: 'Abhishek',
+    salary: 2000000,
+    details: function () {
+        console.log(this) 
+        console.log(this.fName, ' has salary of ', this.salary);
+    }
+}
+obj3.details();
+const newObjFunc = obj3.details;
+console.log(newObjFunc);
+newObjFunc() // undefined ' has salary of ' undefined ------ here you are not representing the this of obj3 // it represents window object not the obj3
+// to achieve this you need to bind this with obj3
+newObjFunc.call(obj3);
+newObjFunc.apply(obj3);
+const newObjFunc1 = newObjFunc.bind(obj3);
+newObjFunc1();
