@@ -44,3 +44,13 @@ console.log(user4.details(), ' ========== object created by using new keyword  -
 // in order to identify the function that is only need to be called by new keyword only
 // we follow this convention of starting the function name with Capital letter with the name
 // so  should be createUser5 changed to CreateUser5
+
+// there is a problem in this code if you just want to traverse through through this
+for(let key in user2) 
+console.log(key , ' ========== key in the user2 ===== ');
+// the above line gives you the keys present in the user2 and also the keys that are in PROTOTYPE 
+// to avoid getting all the keys you can use hasownproperty method on object......
+for(let key in user2) {
+    if(user2.hasOwnProperty(key)) console.log(key, ' -------- key only inside user2 ------- ');
+}
+// in this way you can avoid the keys in prototype ....... 
