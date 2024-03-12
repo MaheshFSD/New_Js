@@ -54,3 +54,4 @@ for(let key in user2) {
     if(user2.hasOwnProperty(key)) console.log(key, ' -------- key only inside user2 ------- ');
 }
 // in this way you can avoid the keys in prototype ....... 
+
