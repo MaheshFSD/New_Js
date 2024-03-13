@@ -85,5 +85,24 @@ console.log(person1User1, '========= after changing the values ---- ');
 person1User1.nameChange('Rakesh', 'modi');
 console.log(person1User1, ' ------- after changing values through method ----');
 
-// solution 3
+// solution 3 ----- using setters
+// add a set method to the class to do this
+class PetForHuman {
+    constructor(fName, age, color, type) {
+        this.fName = fName;
+        this.age = age;
+        this.color = color;
+        this.type = type;
+    }
+    set changeNameAndAge (str) {
+        const [fName, age] = str.split(' ');
+        this.fName = fName;
+        this.age = age;
+    }
+}
+const pet1 = new PetForHuman('tommy', 6, 'brown', 'dog');
+console.log(pet1, ' ========= pet1 ------- ');
+// console.log(pet1.changeNameAndAge('puppy 8'), ' ------ error') // error here 
+pet1.changeNameAndAge = 'puppy 8';
+console.log(pet1, ' ========= after changing values using setter methods ----- ');
 
