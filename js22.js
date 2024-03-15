@@ -10,6 +10,7 @@
 
 
 // hosting 
+// with var and function 
 console.log(variable1, ' ------ variable1'); // undefined
 var variable1;
 // console.log(variable2, ' =-------- variable2'); // reference error not defined
@@ -22,3 +23,14 @@ function func1 (){
     console.log('------- func1 ------- called ----- ');
 }
 console.log(func1());// this will print ---- ------- func1 ------- called -----  and undefined cause the func1 is not returning to clg stmt ----
+
+// with let and const 
+
+// console.log(variable3, ' =========== variable3 -====== '); // Error - cannot access variable 3 before initialization
+// console.log(variable4, ' ------------ var 4 ------ '); // Error
+let variable3;
+console.log(variable3, ' ------------ var 3 ------ '); // undefined
+variable3 = 3000;
+console.log(variable3, ' =========== variable3 -====== ');
+
+
