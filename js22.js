@@ -33,4 +33,9 @@ console.log(variable3, ' ------------ var 3 ------ '); // undefined
 variable3 = 3000;
 console.log(variable3, ' =========== variable3 -====== ');
 
+// console.log(variable5, ' ----- var 5 const ----- '); // error - can't use before
+// console.log(variable6, ' ----- var 5 const ----- '); // error - can't use before
+// const variable5; // is error. we can't just declare we must initialize
+const variable5 = 111111;
+console.log(variable5, ' -------- const variable ------ ');
 
