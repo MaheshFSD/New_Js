@@ -39,3 +39,8 @@ console.log(variable3, ' =========== variable3 -====== ');
 const variable5 = 111111;
 console.log(variable5, ' -------- const variable ------ ');
 
+// hello(); // Error Cannot access 'hello' before initialization ---
+console.log(hello, ' -------- printing hello ---------');
+const hello = () => {
+    console.log('-------- welcome all! ------- ');
+};
