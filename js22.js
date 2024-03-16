@@ -40,7 +40,9 @@ const variable5 = 111111;
 console.log(variable5, ' -------- const variable ------ ');
 
 // hello(); // Error Cannot access 'hello' before initialization ---
-console.log(hello, ' -------- printing hello ---------');
+// console.log(hello, ' -------- printing hello ---------'); // also same error as above
 const hello = () => {
     console.log('-------- welcome all! ------- ');
 };
+console.log(hello, ' --------- printing after declare and intialization ----');
+hello();
