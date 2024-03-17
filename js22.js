@@ -46,3 +46,17 @@ const hello = () => {
 };
 console.log(hello, ' --------- printing after declare and intialization ----');
 hello();
+// More examples for understanding Execution context and hoisting -------  
+console.log(newFunc, ' ========== newFunc -------- ');
+var newFunc;
+console.log(newFunc, ' ========== newFunc -------- ');
+newFunc = function () {
+    console.log('------ from new func var declaration ------ ');
+}
+console.log(newFunc, ' ========== newFunc -------- ');
+
+// console.log(newVarLet, ' ====== newVarLet  ========= '); // Error
+let newVarLet;
+console.log(newVarLet, ' ====== newVarLet  ========= '); // undefined
+newVarLet = 100;
+console.log(newVarLet, ' ====== newVarLet  ========= '); // 100
