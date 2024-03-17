@@ -60,3 +60,20 @@ let newVarLet;
 console.log(newVarLet, ' ====== newVarLet  ========= '); // undefined
 newVarLet = 100;
 console.log(newVarLet, ' ====== newVarLet  ========= '); // 100
+
+// console.log(newFuncLet, ' ------ newFuncLet ------- '); // error
+let newFuncLet;
+console.log(newFuncLet, ' ------ newFuncLet ------- ');
+newFuncLet = function () {
+    console.log(' ------- newFuncLet ------ ');
+}
+console.log(newFuncLet, ' ------ newFuncLet ------- ');
+
+// console.log(newVarConst, ' ---------- newVarConst ------ ');
+const newVarConst = 'CONST';
+console.log(newVarConst, ' ======= newVarConst ====== ');
+// console.log(newConstFunc, ' ------- newConstFunc ------- ');
+const newConstFunc = function () {
+    console.log(' ------ newConstFunc -------- ');
+}
+console.log(newConstFunc, ' ------- newConstFunc ------ ');
