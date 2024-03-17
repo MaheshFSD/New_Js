@@ -77,3 +77,6 @@ const newConstFunc = function () {
     console.log(' ------ newConstFunc -------- ');
 }
 console.log(newConstFunc, ' ------- newConstFunc ------ ');
+console.log(newVarLet1, ' ======== newVarLet1 ---- '); // Error
+let newVarLet1 = 10000;
+console.log(newVarLet1, ' ======== newVarLet1 ---- '); // 10000
