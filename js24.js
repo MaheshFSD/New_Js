@@ -21,3 +21,17 @@ function calc (a,b) {
 const ans = calc(10,100);
 ans();
 
+// ex3
+function power (p) {
+    function calculatePower (ind) {
+        console.log(ind ** p, ' ----- value ----- ');
+    }
+    return calculatePower;
+}
+const cube = power(3);
+console.log(cube, ' -------- function that is returned ---- ');
+cube(10);
+const square = power(2);
+square(9);
+const powerOf4 = power(4);
+powerOf4(2);
