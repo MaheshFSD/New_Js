@@ -31,7 +31,8 @@ ans();
 // const power = (p) => {
 //     return (ind) => console.log(ind ** p, ' ----- value ----- ');
 // }
-const power = (p) =>  (ind) => console.log(ind ** p, ' ----- value ----- ');
+// const power = (p) =>  (ind) => console.log(ind ** p, ' ----- value ----- ');
+const power = p => ind => console.log(ind ** p, ' ----- value ----- ');
 const cube = power(3);
 console.log(cube, ' -------- function that is returned ---- ');
 cube(10);
@@ -39,3 +40,17 @@ const square = power(2);
 square(9);
 const powerOf4 = power(4);
 powerOf4(2);
+
+// ex4 - realtime purposes
+// counting how many times does a function get called
+const func = () => {
+    let counter =0;
+    return () => {
+        if(counter<1) {console.log(counter, ' ------- function called once ------ '); counter++;}
+        else console.log(counter, '--------- function trying to call multiple times ----- ');
+    }
+}
+const myFunc = func();
+myFunc();
+myFunc();
+myFunc();
