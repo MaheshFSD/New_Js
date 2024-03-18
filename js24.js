@@ -22,12 +22,16 @@ const ans = calc(10,100);
 ans();
 
 // ex3
-function power (p) {
-    function calculatePower (ind) {
-        console.log(ind ** p, ' ----- value ----- ');
-    }
-    return calculatePower;
-}
+// function power (p) {
+//     function calculatePower (ind) {
+//         console.log(ind ** p, ' ----- value ----- ');
+//     }
+//     return calculatePower;
+// }
+// const power = (p) => {
+//     return (ind) => console.log(ind ** p, ' ----- value ----- ');
+// }
+const power = (p) =>  (ind) => console.log(ind ** p, ' ----- value ----- ');
 const cube = power(3);
 console.log(cube, ' -------- function that is returned ---- ');
 cube(10);
