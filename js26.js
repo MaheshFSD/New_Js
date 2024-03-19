@@ -45,3 +45,14 @@ const elementText = document.getElementById('textContentId');
 console.log(elementText, ' ---------- elementText ------- ');
 console.log(elementText.innerText, ' ---------- elementText ------- '); // InnerText vs textContent  ---------- elementText -------  
 // above line is the example of difference between textContent vs innerText
+
+//styles
+const navElement = document.querySelector('ul li .aClass')
+const navElements = document.querySelectorAll('ul li .aClass')
+console.log(navElement, ' --------- navElement ---- ');
+console.log(navElements, ' --------- navElements ---- ');
+navElement.style = 'color: red; text-decoration: none';
+navElement.style = 'color: red; text-decoration: none';
+console.log(navElement.style, ' ========= navElement.style obj ------ ');
+navElement.style.backgroundColor = 'green';
+// Remember this backgroundColor vs backgroun-color
