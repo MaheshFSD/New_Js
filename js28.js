@@ -31,3 +31,11 @@ console.log(bodyParent, ' ----------- bodyParent ----- ');
 bodyParent.style = "color: #efefef, background-color: red";
 // we can directly select body
 console.log(document.body, ' ------- body selected ----- ');
+console.log(document.head, ' ------- head selected ----- ');
+
+// We can even use querySelector on an element and it searches in the child 
+const headEle = document.querySelector('head');
+console.log(headEle.querySelector('title'), ' ---------- title');
+const titleStr = headEle.querySelector('title');
+titleStr.textContent = 'I am new title'
+console.log(document.head.querySelector('title').innerText, ' ----------- titleeeee ------- ');
