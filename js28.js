@@ -45,3 +45,19 @@ const childrenEles = document.querySelector('#ulId');
 console.log(childrenEles, ' ---------- child elements ------ ');
 console.log(childrenEles.childNodes, ' ---------- child elements ------ ');
 console.log(childrenEles.children, ' ------- only childrens ------ ');
+
+// classList
+const h3Ele = document.querySelector('.gesbcn1 ');
+console.log(h3Ele, ' -------h3 ele ------- ');
+console.log(h3Ele.classList, ' ------ all the classes ------ '); // DOMTokenList(3) ['gesbcn1', 'class2', 'class3', value: 'gesbcn1 class2 class3']
+h3Ele.classList.add('class4');
+console.log(h3Ele.classList, ' ---------- all classes --- ');
+h3Ele.classList.remove('class2')
+console.log(h3Ele.classList, ' ---------- all classes --- ');
+console.log(h3Ele.classList.contains('class2'));
+console.log(h3Ele.classList.contains('class3'));
+h3Ele.classList.toggle('class5');
+console.log(h3Ele.classList, ' -------- class list ---');
+h3Ele.classList.toggle('class5');
+console.log(h3Ele.classList, ' -------- class list ---');
+
