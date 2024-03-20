@@ -22,3 +22,12 @@ console.log(headNode.nextSibling.nextSibling, ' ---------- next sibling ------ '
 // parentElement
 // childNodes
 // nextSibling
+// nextElementSibling
+console.log(headNode.nextElementSibling, ' --------- nextElementSibling ----- ');
+const aElement = document.querySelector('.aClass');
+console.log(aElement, ' ------- a element ------ ');
+const bodyParent = aElement.parentNode.parentNode.parentNode; 
+console.log(bodyParent, ' ----------- bodyParent ----- ');
+bodyParent.style = "color: #efefef, background-color: red";
+// we can directly select body
+console.log(document.body, ' ------- body selected ----- ');
