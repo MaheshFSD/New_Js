@@ -39,3 +39,9 @@ console.log(headEle.querySelector('title'), ' ---------- title');
 const titleStr = headEle.querySelector('title');
 titleStr.textContent = 'I am new title'
 console.log(document.head.querySelector('title').innerText, ' ----------- titleeeee ------- ');
+console.log(titleStr.childNodes, ' ------ title child nodes ----- ');
+// to avoid newlines or name sapces on in childnodes 
+const childrenEles = document.querySelector('#ulId');
+console.log(childrenEles, ' ---------- child elements ------ ');
+console.log(childrenEles.childNodes, ' ---------- child elements ------ ');
+console.log(childrenEles.children, ' ------- only childrens ------ ');
