@@ -18,3 +18,11 @@ for(let i=0;i<100000000;i++) {
 console.log(variable, ' -------- variable ---- ');
 console.log('script ends ....');
 
+// just trying to change the background and text colors ...
+allBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        console.log(e, ' ------ event ------ ');
+        e.target.style.backgroundColor = 'teal';
+        e.target.style.color = 'red';
+    })
+})
