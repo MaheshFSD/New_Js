@@ -22,4 +22,12 @@ const addBefore = document.querySelector('#ulId')
 addBefore.before(newEle);
 addBefore.after(newEle);
 
-
+// insertAdjacentHTML(where, html)
+// beforeBegin
+// AfterBegin
+// beforeEnd
+// afterEnd
+fullList.insertAdjacentHTML("beforebegin", '<li>New li added ------ </li>');
+fullList.insertAdjacentHTML("afterBegin", '<li>New li added ------ </li>');
+fullList.insertAdjacentHTML("beforeEnd", '<li>New li added ------ </li>');
+fullList.insertAdjacentHTML("afterEnd", '<li>New li added ------ </li>');
