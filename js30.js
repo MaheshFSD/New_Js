@@ -22,12 +22,27 @@ btnClick2.addEventListener('click', () => {
 // in case3 of normal functions this is what it's called 
 const buttons = document.querySelectorAll('.eventBtns button');
 console.log(buttons, ' ----- all buttons ---- ');
-buttons.forEach(btn => {
-    console.log(btn, this, ' ------- btn and this ------ ');
-    btn.addEventListener('click', function () {
-        console.log('btn got clicked from loop');
-        console.log('btn got clicked from loop');
-        console.log(btn.textContent, this, ' ----- textContent ----- ');
-        console.log(this.textContent, this, ' ----- textContent ----- '); // undefined incase of arrow. otherwise fine -----
+// buttons.forEach(btn => {
+//     console.log(btn, this, ' ------- btn and this ------ ');
+//     btn.addEventListener('click', function () {
+//         console.log('btn got clicked from loop');
+//         console.log('btn got clicked from loop');
+//         console.log(btn.textContent, this, ' ----- textContent ----- ');
+//         console.log(this.textContent, this, ' ----- textContent ----- '); // undefined incase of arrow. otherwise fine -----
+//     })
+// })
+// how can we use arrow function along with the eventlistners...
+const allBtns = document.querySelectorAll('.eventBtns button');
+console.log(allBtns, ' ----- all buttons ----');
+
+// Event Object 
+allBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        console.log(e, ' ------ e ------ ');
+        console.log(e.target, ' ------ e.target ----- ');
+        console.log(e.currentTarget, ' ------ e.currentTarget ----- ');
+        console.log(e.currentTarget.textContent, ' ------ e.currentTarget ----- ');
+        console.log(e.target.value, ' ------ e.target.value ----- ');
+        console.log(e.currentTarget.value, ' ------ e.target.value ----- ');
     })
 })
