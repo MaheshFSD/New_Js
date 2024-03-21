@@ -20,3 +20,14 @@ btnClick2.addEventListener('click', () => {
 });
 // this in case of arrow is one level above or where the function is created
 // in case3 of normal functions this is what it's called 
+const buttons = document.querySelectorAll('.eventBtns button');
+console.log(buttons, ' ----- all buttons ---- ');
+buttons.forEach(btn => {
+    console.log(btn, this, ' ------- btn and this ------ ');
+    btn.addEventListener('click', function () {
+        console.log('btn got clicked from loop');
+        console.log('btn got clicked from loop');
+        console.log(btn.textContent, this, ' ----- textContent ----- ');
+        console.log(this.textContent, this, ' ----- textContent ----- '); // undefined incase of arrow. otherwise fine -----
+    })
+})
