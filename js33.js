@@ -12,6 +12,23 @@ console.log(grandParent,parent,child, ' --------- ');
 // parent.addEventListener('click', () => {
 //     console.log('Parent Called ----- ');
 // })
+
+// Capturing Event
+child.addEventListener('click', () => {
+    console.log('child capture called ---- ');
+}, true);
+parent.addEventListener('click', () => {
+    console.log('Parent capture Called ----- '); 
+;}, true);
+grandParent.addEventListener('click', () => {
+    console.log("grand Parent capture called -----");
+}, true);
+document.body.addEventListener('click', () => {
+    console.log('body capture called ----- ');
+}, true);
+
+// NOt capturing
+// Event Bubbling.... / Event propagation
 child.addEventListener('click', () => {
     console.log('child called ---- ');
 })
@@ -24,3 +41,6 @@ grandParent.addEventListener('click', () => {
 document.body.addEventListener('click', () => {
     console.log('body clicked ----- ');
 })
+// above is the example of Event Bubbling
+// if you add a click event on child and it's parents, if you click on child then the parents also gets called ---
+// this is called event bubbling/propagation .....
