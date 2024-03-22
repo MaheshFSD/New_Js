@@ -14,3 +14,29 @@ body{
 .header {
     
 }
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+.box{
+    min-width: 100px;
+    min-height: 100px;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 2rem;
+    color: white;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+.grandParent{
+    background-color: #264653;
+}
+.parent{
+    background-color: #2a9d8f;
+}
+.child{
+    background-color: #e9c46a;
+}

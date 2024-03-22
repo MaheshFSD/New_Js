@@ -18,3 +18,6 @@ document.body.addEventListener('keypress', e => {
 colorBtn.addEventListener('mouseover', e => {
     console.log(e, '----- event ------ ');
 })
+colorBtn.addEventListener('mouseleave', e => {
+    console.log(e, '----- event ------ ');
+})
