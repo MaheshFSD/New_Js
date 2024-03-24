@@ -45,3 +45,22 @@ newPromise().then((resp) => {
 })
 
 // if you call 2 promises one after the other, the success resolved promise gets high priority and gets executed first and the error one later. if both success then order is same, in case of both error also order same. but one is success and one is failure then the success one has high [riority
+// if we want a promise to be concluded in certain  time we use settimeout for that
+
+const newPromise2 = () => {
+    return new Promise((resolve, reject) => {
+        // const val = true;
+        const val = false;
+        setTimeout(() => {
+            if(val)
+            resolve({str: 'success'});
+            else
+            reject(new Error('An error occured'));
+        },2000)
+    })
+}
+
+newPromise2()
+.then((resp) => console.log(resp,' ------ promise 2 resp ------- '))
+.catch((error) => console.log(error, '------- promise2 error response ------- '));
+
