@@ -49,3 +49,5 @@ promise3().then((resp) => {
     return newResp; // this line means Promise.resolve(newResp) --- if we do not return anything it will return undefined here -- that means Promise.resolve(undefined) and we can directly apply .then on returned promise.
 })
 .then((data) => console.log(data, ' -------- data from 3 chain ----- '));
+
+// above is the solution of Callback hell or Pyramid of doom
