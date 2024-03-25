@@ -59,9 +59,50 @@ xhr3.open('get', URL);
 xhr3.onload = () => {
     if(xhr3.status >= 200 && xhr3.sttaus < 300)
     console.log(xhr3.response, ' =---------- xhr3 response -----');
-    else console.log(new Error(' ------- SOME ERROR --------'));
+    else console.log(' ------- SOME ERROR --------');
 }
 xhr3.onerror = () => {
     console.log('Something went wrong ....');
 }
 xhr3.send();
+
+// getting single user data
+// ex5 - one way
+const xhr4 = new XMLHttpRequest();
+const URL1 = 'https://jsonplaceholder.typicode.com/posts/8';
+xhr4.open('GET', URL1);
+xhr4.onload = () => {
+    if(xhr4.status >= 200 && xhr4.status < 300)
+    console.log(xhr4.response, ' -------- single user data -----');
+    else console.log('Error occured');
+}
+xhr4.onerror = () => {
+    console.log('Something went wrong ....');
+}
+xhr4.send();
+
+// ex6 - another way to get single user data 
+const xhr5 = new XMLHttpRequest();
+xhr5.open('GET', URL);
+xhr5.onload = () => {
+    if(xhr5.status >= 200 && xhr5.status < 300) {
+        console.log(xhr5.response, ' ------- xhr5 response ----');
+        // if you know the id order then
+        const user9 = JSON.parse(xhr5.response)[8];
+        console.log(user9, ' ----------- user9 data --') ;
+        // when you don't know
+        const id100 =  JSON.parse(xhr5.response)[99].id;
+        const URL2 = `${URL}/${id100}`;
+        const xhr6 = new XMLHttpRequest();
+        xhr6.open('GET', URL2);
+        xhr6.onload = () => {
+            if(xhr6.status >= 200 && xhr6.status < 300)
+            console.log(xhr6.response)
+            else console.log(' Some error in xhr6 ---');
+        }
+        xhr6.send();
+    }
+    else console.log('Something went wrong.. ');
+}
+xhr5.send();
+// Above is an example of callback hell
