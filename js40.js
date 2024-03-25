@@ -29,3 +29,19 @@ xhr1.onreadystatechange = function () {
     console.log(xhr1.response, ' -------- xhr1.ressponse -----');
 };
 xhr1.send();
+
+const xhr2 = new XMLHttpRequest();
+console.log(xhr2, ' ---------- xhr2 ----- ');
+xhr2.open('GET', URL);
+xhr2.onreadystatechange = () => {
+    console.log(xhr2.readyState, xhr2.status, ' --------- readyState and sttaus on xhr2 ---');
+    if(xhr2.status >= 200 && xhr2.sttaus < 300)
+    console.log(JSON.parse(xhr2.response, ' --------- parsed response ------'));
+    else console.log('Something went wrong ....');
+}
+
+xhr2.onerror = () => {
+    console.log( 'When error occured ------');
+};
+xhr2.send();
+
