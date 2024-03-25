@@ -20,6 +20,8 @@ xhr.onreadystatechange= () => {
     console.log(xhr.readyState, ' ----------readyState value ---- ');
 }
 xhr.send();
+
+//ex2
 const xhr1 = new XMLHttpRequest()
 console.log(xhr1, ' ----- xhr1 ----');
 xhr1.open('get', URL);
@@ -30,18 +32,36 @@ xhr1.onreadystatechange = function () {
 };
 xhr1.send();
 
+// ex3
 const xhr2 = new XMLHttpRequest();
 console.log(xhr2, ' ---------- xhr2 ----- ');
 xhr2.open('GET', URL);
 xhr2.onreadystatechange = () => {
     console.log(xhr2.readyState, xhr2.status, ' --------- readyState and sttaus on xhr2 ---');
+    // if(xhr2.readyState === 4)
     if(xhr2.status >= 200 && xhr2.sttaus < 300)
     console.log(JSON.parse(xhr2.response, ' --------- parsed response ------'));
     else console.log('Something went wrong ....');
 }
 
+// Error handling
 xhr2.onerror = () => {
     console.log( 'When error occured ------');
 };
 xhr2.send();
 
+// ex4 
+const xhr3 = new XMLHttpRequest();
+console.log(xhr3, ' --------- xhr3 -------- ');
+xhr3.open('get', URL);
+// instead of running onstatechange method everytime the state change, we can call onload method - which runs only when readystatus is 4.
+// onload runs when the readyStatus is 4.
+xhr3.onload = () => {
+    if(xhr3.status >= 200 && xhr3.sttaus < 300)
+    console.log(xhr3.response, ' =---------- xhr3 response -----');
+    else console.log(new Error(' ------- SOME ERROR --------'));
+}
+xhr3.onerror = () => {
+    console.log('Something went wrong ....');
+}
+xhr3.send();
