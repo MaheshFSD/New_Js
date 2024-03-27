@@ -1,4 +1,6 @@
 // Fetch 
+
+// GET
 const URL = 'https://jsonplaceholder.typicode.com/posts';
 fetch(URL)
 .then((resp) => {
@@ -26,3 +28,27 @@ fetch(URL)
 })
 .catch(err => console.log(err, ' ------- err from 2 ----- ') );
 // check multiple times with the right and wrong url...
+
+// POST - post actually fakes that the data is added in this api. for practise purpose we get output.
+fetch(URL, {
+    method: 'POST',
+    body: JSON.stringify({
+        title: 'New Title',
+        id: 1,
+        userId: 1,
+        newData: 'SOme new data is added  here'
+    }),
+    headers: {
+        'content-type': 'application/json'
+    }
+})
+.then(resp => resp.json())
+.then(data => console.log(data, '---------- added data ------ '));
+
+const URL1 = 'https://jsonplaceholder.typicode.com/posts/1';
+fetch(URL1)
+.then((resp) => {
+    return resp.json();
+})
+.then(data => console.log(data, ' -------- single data ------- '))
+.catch(err => console.log(err, ' -----err ------'));
